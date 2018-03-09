@@ -1,0 +1,752 @@
+@import "vars"
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	position: relative
+	font-size: 13px
+	margin: 0 
+	font-family: $default-font
+	color: $default-color
+
+a
+	text-decoration: none
+	color: $default-color
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration: none
+		outline: none
+		color: $accent
+
+img
+  height: auto
+  max-width: 100%
+  border: none
+
+ol, ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.employer:after
+	content: ''
+	display: table
+	clear: both
+
+
+/* style of input */
+input::-moz-placeholder
+	color: #222
+	font-weight: 700
+
+input::-webkit-input-placeholder
+	color: #222
+	font-weight: 700
+
+input::placeholder
+	opacity: 1
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus
+	outline: none
+	box-shadow: none
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+textarea
+	background: #fff
+	font-size: 16px
+	width: 100%
+	height: 100%
+	padding: 7px 12px
+	outline: none
+	box-shadow: none
+	border: solid 1px #e0e0e0
+	color: #222222
+	-webkit-appearance: none
+	-moz-appearance: none
+	border-radius: 5px
+	font-weight: 700
+/* End style of input */
+button
+	border: none
+	background-color: transparent
+	outline: none
+.btn-def
+	outline: none
+	box-shadow: none
+	border-radius: 3px
+	padding: 10px 20px
+	font-weight: 700
+	text-align: center
+	color: #fff
+	border: none
+	text-transform: uppercase
+	&.green
+		background: $green-light-color
+	&.yellow
+		background: $yellow-color
+
+.option
+	position: relative
+	padding-left: 25px
+	label
+		position: relative
+		cursor: pointer
+		font-size: 11px
+		span
+			padding-top: 1px
+			display: inline-block
+	input[type="checkbox"]
+		display: none
+	input[type="checkbox"] + label:after
+		content: ''
+		position: absolute
+		left: -25px
+		top: 1px
+		width: 18px
+		height: 18px
+		border: solid 1px #e0e0e0
+		outline: none
+		padding: 0
+		border-radius: 3px
+		cursor: pointer 
+	input[type="checkbox"]:checked + label:before
+		content: ''
+		position: absolute
+		left: -21px
+		top: 5px
+		width: 10px
+		height: 10px
+		border-radius: 2px
+		background: #e0e0e0 
+/**Убрать стрелочки у number**/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+
+input[type='number'] 
+	-moz-appearance: textfield 
+/**End Убрать стрелочки у number**/
+
+/*________header________*/
+.header
+	background: #19233c
+	padding: 21px 0 
+	color: #fff
+	.shell-wrapper
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		.view
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			&:nth-child(1)
+				flex-basis: 50%
+			&:nth-child(2)
+				flex-basis: 44%
+				justify-content: space-between
+	.logo
+		margin-right: 50px
+		width: 110px
+	.menu-header
+		ul
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 450px
+			justify-content: space-around
+			align-items: center
+		a
+			position: relative
+			display: inline-block
+			color: #fff
+			font-size: 14px
+			padding: 9px 23px
+			text-transform: uppercase
+			font-weight: 700
+			border-radius: 3px
+			&.active
+				background: $green-light-color
+				&:before
+					content: ''
+					position: absolute
+					bottom: -7px
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 5px 5px 0 5px
+					border-color: $green-light-color transparent transparent transparent
+
+	.menu-header a:hover
+		background: $green-light-color
+		&:before
+			content: ''
+			position: absolute
+			bottom: -7px
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 5px 5px 0 5px
+			border-color: $green-light-color transparent transparent transparent
+
+	.menu-header li:last-child
+		background: url(../img/icon-1.png)
+		background-position: 5px 50%
+		background-repeat: no-repeat
+		a
+			padding-left: 35px
+			&:hover
+				background: url(../img/icon-1.png) $green-light-color
+				background-position: 5px 50%
+				background-repeat: no-repeat
+
+	.user-plan
+		display: inline-block
+		border: solid 1px rgba(255, 255, 255, .15)
+		border-radius: 50px
+		padding: 7px 20px
+		color: #fff
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-flex
+		width: 220px
+		justify-content: space-around
+		align-items: center
+		i
+			font-style: normal
+	.support, .user-menu
+		display: inline-block
+		font-size: 14px
+		vertical-align: middle
+		color: #fff
+		span
+			padding-left: 10px
+	.user-menu
+		span
+			padding: 0 10px	
+/*________End header________*/
+
+.main-wrapper
+	background: #f0f1f5
+	padding-top: 40px
+
+/*** .top-panel ***/
+.main-wrapper
+	.top-panel
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		margin-bottom: 10px
+		.currency-view
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 660px
+
+			a
+				position: relative
+				display: inline-block
+				font-size: 12px
+				text-transform: uppercase
+				color: #222
+				font-weight: 700
+				padding: 12px 16px
+				background: #fff
+				margin-right: 1px
+
+			li.selected
+				a
+					background: #f0f1f5
+					&:before
+						content: ''
+						position: absolute
+						top: 0	
+						left: 0
+						width: 100%
+						height: 2px
+						background: $green-light-color
+		.settings-view
+			background: #fff
+			border-radius: 5px
+			height: 40px
+			.item
+				display: -webkit-inline-flex
+				display: -moz-inline-flex
+				display: -ms-inline-flex
+				display: -o-inline-flex
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				height: 100%
+				cursor: pointer
+			.favorites
+				min-width: 142px
+				border-right: solid 1px #e5e6eb 
+			img
+				display: inline-block
+				padding: 0 10px
+			span
+				font-weight: 700
+				color: #222
+				font-size: 14px
+				padding: 	0 5px 0 0
+/*** End .top-panel ***/
+
+/*** .panel-ratio ***/
+.panel-ratio
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	border-radius: 15px
+	margin-bottom: 10px
+
+	.item
+		position: relative
+		border-right: solid 1px #e5e6eb
+		width: 100px
+		background: #fff
+		text-align: center
+		cursor: pointer
+		&:first-child
+			border-top-left-radius: 5px
+			border-bottom-left-radius: 5px
+		&:last-child
+			border-right: none
+			border-top-right-radius: 5px
+			border-bottom-right-radius: 5px
+		&.active
+	span
+		display: block
+	.ratio-currency
+		font-weight: 700
+		padding: 6px 0
+		height: 30px
+		text-transform: uppercase
+		background: #fbfbfb
+	.ratio-number
+		padding: 6px 0
+		height: 30px
+		border-top: solid 1px #e5e6eb
+
+	.item.active
+		.ratio-currency
+			background: #d8dae1
+		.ratio-number	
+			background: #f0f1f5
+		&:before
+			content: ''
+			position: absolute
+			top: 0	
+			left: 0
+			width: 100%
+			height: 2px
+			background: $green-light-color		
+/*** End .panel-ratio ***/
+
+/***  .view-schedule ***/
+.shell-schedule-sidebar
+	margin-bottom: 10px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+.view-schedule
+	background: #fff
+	border-radius: 5px
+	padding: 20px 15px
+	width: 810px
+	margin-right: 10px
+	.top-panel
+		font-size: 11px
+		span
+			padding-right: 20px
+		.red
+			color: #ff3840
+		.green
+			color: #3cbf8c
+		select
+			color: #3e78c0
+			border: none
+			outline: none
+			padding: 5px 15px 0px 0
+			background: transparent url(../img/arrow-top-blue.png) 100% 70%  no-repeat
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			border-bottom: dashed 1px #3e78c0
+	.time-server
+		margin-left: 20px
+		padding-right: 0
+	.view-schedule
+		width: 810px	
+	.schedule-main
+		max-width: 770px	
+/***  End .view-schedule ***/
+
+.view-sidebar
+	width: 320px
+	.nav-tabs
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		border-bottom: none
+		left: 10px
+		&:before
+			content: ''
+			position: absolute
+			left: -10px
+			top: 0
+			background: #e5e6eb
+			width: 20%
+			height: 42px
+		li
+			position: relative
+			float: none
+			padding: 12px 17px
+			cursor: pointer
+			font-weight: 700
+			text-transform: uppercase
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				background: #e5e6eb
+				transform: skew(25deg)
+				border-radius: 5px
+				border-radius: 5px
+			span
+				position: relative
+				z-index: 1
+		li.selected
+			&:before
+				background: #fff
+
+	.nav-tabs.before
+		&:before
+			background: #fff
+
+	.main-container-tabs
+		.tab
+			display: none		
+
+	.form-conversion
+		background: #fff
+		padding: 20px 25px 10px 25px
+		.view
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.form-group
+				width: 125px
+				.shell
+					position: relative
+				.name
+					font-size: 13px
+					margin-bottom: 12px
+				input[type='number']
+					padding-right: 40px	
+				.txt
+					color: #000
+					font-size: 13px
+					font-weight: 700
+					color: #d8d9db
+					text-transform: uppercase
+					position: absolute
+					right: 15px
+					top: 50%
+					transform: translateY(-50%)
+		.form-group-submit
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between	
+		.total
+			span
+				padding-right: 20px
+
+.view-sidebar
+	.balance-block
+		position: relative
+		width: 320px
+		background: #fff
+		margin-top: 10px
+		padding: 20px 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 16px
+			height: 100%
+			width: 1px
+			z-index: 1
+			background: #f0f1f5
+
+
+		.top-panel
+			padding-left: 15px
+			padding-right: 15px
+			.title
+				font-size: 14px		
+			.time-date
+				span
+					padding: 0 5px
+					font-weight: 700
+					font-size: 11px
+		.pre-panel
+			padding-left: 15px
+			padding-right: 55px
+			font-weight: 700
+			font-size: 10px
+			margin: 20px 0 12px 0
+			text-transform: uppercase
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+		.item
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 6px 35px 6px 15px
+			border-top: solid 1px #f0f1f5
+			margin-right: 20px
+		.data-view
+			max-height: 150px	
+			overflow: hidden
+		.descript
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.icon
+				margin-right: 5px
+				width: 22px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: center
+
+		.name
+			font-weight: 700
+			font-size: 13px
+			color: #28292b
+		.balance
+			font-size: 11px
+			color: #28292b
+			width: 40px
+			text-align: left
+			font-size: 11px	
+
+.orders-shell
+	background: #fff
+	width: 605px
+	height: 410px
+	border-radius: 3px
+	.top-panel
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-right: 25px
+		.option
+			label
+				font-weight: normal
+		.nav-tabs
+			padding: 15px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			border-bottom: none
+			li
+				font-size: 14px
+				font-weight: 700
+				float: none
+				margin-right: 10px
+				cursor: pointer
+				&.selected
+					color: #3e78c0
+					border-bottom: dashed 1px #3e78c0
+	.table-wrapper
+		table
+			width: 100%
+			thead
+				border-bottom: solid 1px #e5e6eb
+				th
+					text-transform: uppercase
+					font-size: 10px
+			tr td,
+			tr th	
+				padding: 5px 15px
+				&:nth-child(3)
+					width: 200px
+
+	.main-container-tabs .tab
+		display: none
+
+	.not-information
+		padding-top: 18%
+		.txt
+			color: #000
+			font-size: 14px
+			color: #c8c8c8
+			font-weight: 700
+			text-align: center
+		.icon
+			text-align: center
+			margin-bottom: 30px	
+
+.panel-order
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	margin-bottom: 50px
+	height: 400px
+	overflow: hidden
+	.order-view
+		position: relative
+		width: 255px
+		background: #fff
+		border-radius: 3px
+		padding: 17px 0
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			right: 16px
+			height: 100%
+			width: 1px
+			z-index: 1
+			background: #f0f1f5
+		.title
+			color: #222
+			font-size: 14px
+			font-weight: 700
+			padding-left: 15px
+		.table-wrapper
+			padding-top: 10px
+			.tbodys
+				height: 300px
+				padding-right: 20px
+			table
+				width: 100%
+				th
+					text-transform: uppercase
+					font-size: 10px
+					padding: 9px 0
+					text-align: left
+					&:nth-child(1)
+						padding-left: 15px
+						width: 42%
+				tbody
+					tr
+						border-bottom: solid 1px #e0e0e0
+					td
+						padding: 9px
+					td:nth-child(1)
+						font-weight: 700
+						padding-left: 15px
+
+
+
+
+.mCSB_outside + .mCSB_scrollTools
+	right: 0
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+	background: #d3d4da
+	width: 4px
+	opacity: 1
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+	background: #d3d4da
+
+.mCSB_scrollTools .mCSB_draggerRail
+	background-color: transparent	
+/*________MAIN	PAGE________*/
+
+
+/*________End MAIN	PAGE________*/
+
+	
+
+
+
+
+
+	
+
+
+
