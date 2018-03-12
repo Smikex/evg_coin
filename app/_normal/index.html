@@ -27,33 +27,136 @@
 						<li><a href="#">Кошелек</a></li>
 						<li><a href="#">Coin</a></li>
 					</ul>
-				</nav><!-- End .menu-header -->
+				</nav>
+				<!-- End .menu-header -->
 			</div>
 
 			<div class="view">
 				<!-- .user-balans -->
 				<div class="user-balans">
-					<div class="top-panel">
-						<a href="#" class="user-plan" id="user-plan">
-							<img src="img/balans.png" alt="">
+					<div class="top-panel dropdown">
+						<a href="#" class="user-plan" id="user-plan" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							<!-- <img src="img/balans.png" alt=""> -->
 							<span class="balans-selected">Баланс: <i>0.0308</i></span>
 							<span class="plan-selected">BTC</span>
-							<img src="img/arrow-top.png" alt="">
+							<!-- <img src="img/arrow-top.png" alt=""> -->
 						</a>
+						<div class="header_balans_drop dropdown-menu" aria-labelledby="user-plan">
+							<!-- .balance-block -->
+							<div class="view-sidebar">
+								<div class="balance-block">
+									<div class="box">
+
+										<!-- .top-panel -->
+										<div class="top-panel">
+											<!-- <div class="title"><strong>Баланс</strong></div> -->
+											<div class="time-date">
+												<span class="time"><strong>20:30</strong></span>/<span class="date"><strong>20.03.2018</strong></span>
+												<button><img src="img/updata.png" alt=""></button>
+											</div>
+										</div>
+										<!-- End .top-panel -->
+
+										<!-- .pre-panel -->
+										<div class="pre-panel">
+											<strong>Валюта</strong><strong>баланс</strong>
+										</div>
+										<!-- End .pre-panel -->
+
+										<!-- .data-view -->
+										<div class="data-view">
+
+											<!-- .item -->
+											<div class="item">
+												<div class="descript">
+													<div class="icon"><img src="img/bit.jpg" alt=""></div>
+													<div class="name">Bitcoin, BTC</div>
+												</div>
+												<div class="balance">0.24778</div>
+											</div>
+											<!-- End .item -->
+
+											<!-- .item -->
+											<div class="item">
+												<div class="descript">
+													<div class="icon"><img src="img/eth.jpg" alt=""></div>
+													<div class="name">Ethereum, ETH</div>
+												</div>
+												<div class="balance">60.3060</div>
+											</div>
+											<!-- End .item -->
+
+											<!-- .item -->
+											<div class="item">
+												<div class="descript">
+													<div class="icon"><img src="img/ver.jpg" alt=""></div>
+													<div class="name">Verge</div>
+												</div>
+												<div class="balance">780.20</div>
+											</div>
+											<!-- End .item -->
+
+											<!-- .item -->
+											<div class="item">
+												<div class="descript">
+													<div class="icon"><img src="img/qtu.jpg" alt=""></div>
+													<div class="name">Qtum, QTUM</div>
+												</div>
+												<div class="balance">30.020</div>
+											</div>
+											<!-- End .item -->
+
+											<!-- .item -->
+											<div class="item">
+												<div class="descript">
+													<div class="icon"><img src="img/icn.jpg" alt=""></div>
+													<div class="name">Iconomi, ICN</div>
+												</div>
+												<div class="balance">20.0080</div>
+											</div>
+											<!-- End .item -->
+										</div>
+										<!-- End .data-view -->
+									</div>
+								</div>
+								<!-- End .balance-block -->
+							</div>
+
+						</div>
+
 					</div>
 					<div class="bottom-panel"></div>
-				</div><!-- End .user-balans -->
+				</div>
+				<!-- End .user-balans -->
 				<a href="#" class="support"><img src="img/support.png"><span>Поддержка</span></a>
-				<a href="#" class="user-menu"><img src="img/user.png"><span>Joe Beneth</span><img src="img/arrow-top.png"></a>
+				<div class="user-menu dropdown">
+					<a href="#" class="user-menu" id="user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						<!-- <img src="img/user.png"> -->
+						<span>Joe Beneth</span>
+						<!-- <img src="img/arrow-top.png"> -->
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="user-plan">
+						<li>Верификация аккаунта</li>
+						<li>Личные сообщения</li>
+						<li>Реферальная программа</li>
+						<li>Cashback</li>
+						<li>История торгов</li>
+						<li>Новости</li>
+						<li>Настройки</li>
+						<li>Выйти</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 
-	</div><!-- End .container -->
+	</div>
+	<!-- End .container -->
 
-</header><!-- .header -->
+</header>
+<!-- .header -->
 
 <body>
-
 
 <!-- .main-wrapper -->
 <section class="main-wrapper">
@@ -203,7 +306,6 @@
 				</div><!-- End .top-panel -->
 
 				<div class="schedule-main">
-
 					<img src="img/graf.jpg" alt="">
 				</div>
 			</div><!-- End .shell-schedule -->
@@ -235,7 +337,7 @@
 										<input type="number" placeholder="0">
 										<div class="txt">USD</div>
 									</div>
-
+								
 								</div>
 							</div>
 
@@ -277,7 +379,7 @@
 										<input type="number" placeholder="0">
 										<div class="txt">USD</div>
 									</div>
-
+								
 								</div>
 							</div>
 
@@ -375,7 +477,7 @@
 
 		<!-- .panel-order -->
 		<div class="panel-order">
-
+					
 			<!-- .orders-shell -->
 			<div class="orders-shell">
 				<!-- .top-panel -->
@@ -436,7 +538,7 @@
 						<div class="not-information">
 							<div class="icon"><img src="img/not-inform.png" alt=""></div>
 							<div class="txt">Нет информации для отображения</div>
-						</div>
+						</div>		
 					</div>
 				</div><!-- End .main-container-tabs -->
 			</div><!-- End .orders-shell -->
@@ -597,8 +699,10 @@
 	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
 	<link rel="stylesheet" href="css/media.css">
 	<script src="js/scripts.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/common.js"></script> 
 	<!--End .normal-->
 
 </body>
 </html>
+
+

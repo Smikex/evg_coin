@@ -39,6 +39,9 @@ gulp.task('default-js', ['default-common-js'], function() {
 		'app/libs/upload/dist/jquery.fileupload-image.js',
 		'app/libs/upload/dist/jquery.fileupload-validate.js',
 		'app/libs/upload/dist/upload-kit.min.js',
+		'app/libs/upload/highstock/highstock.js',
+		'app/libs/upload/highstock/exporting.js',
+
 
 
 		'app/js/common.min.js', // Всегда в конце
@@ -90,12 +93,12 @@ gulp.task('default-fileinclude', function() {
 gulp.task('default-img-min', function() {
 	return gulp.src(['app/img/**/*','app/img/**/**/*'])
 	.pipe(cache(imagemin()))
-	.pipe(gulp.dest('app/_default/img')); 
+	.pipe(gulp.dest('app/_default/img'));
 });
 
 gulp.task('default-fonts', function() {
 	return gulp.src(['app/fonts/**/*','app/fonts/**/**/*'])
-	.pipe(gulp.dest('app/_default/fonts')); 
+	.pipe(gulp.dest('app/_default/fonts'));
 });
 
 gulp.task('default-watch', ['default-fileinclude','default-min-css','default-normal-css','default-js','default-browser-sync'], function() {
@@ -172,12 +175,12 @@ gulp.task('normal-fileinclude', function() {
 gulp.task('normal-img-min', function() {
 	return gulp.src(['app/img/**/*','app/img/**/**/*'])
 	.pipe(cache(imagemin()))
-	.pipe(gulp.dest('app/_normal/img')); 
+	.pipe(gulp.dest('app/_normal/img'));
 });
 
 gulp.task('normal-fonts', function() {
 	return gulp.src(['app/fonts/**/*','app/fonts/**/**/*'])
-	.pipe(gulp.dest('app/_normal/fonts')); 
+	.pipe(gulp.dest('app/_normal/fonts'));
 });
 
 gulp.task('normal-watch', ['normal-fileinclude','normal-libs-min-css','normal-css','normal-js','normal-libs-js','normal-browser-sync'], function() {

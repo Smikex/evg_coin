@@ -302,6 +302,95 @@ input[type='number'] {
   .header .user-menu span {
     padding: 0 10px; }
 
+.header_balans_drop {
+  min-width: 320px;
+  color: #28292b;
+  border: solid 1px #ffffff;
+  margin: -2px 0 0;
+  border-top: none; }
+  .header_balans_drop .balance-block {
+    padding-top: 0 !important; }
+
+.top-panel.dropdown.open {
+  -webkit-border-radius: 3px 3px 0 0;
+          border-radius: 3px 3px 0 0;
+  background-color: #ffffff; }
+  .top-panel.dropdown.open span {
+    color: #222222; }
+
+.top-panel.dropdown span:nth-child(1)::before {
+  content: '';
+  padding-left: 25px;
+  background: url("../img/balans.png") 0 -1px no-repeat; }
+
+.top-panel.dropdown span:nth-child(2)::after {
+  content: '';
+  padding-right: 11px;
+  background: url("../img/arrow-top.png") 3px 7px no-repeat; }
+
+.top-panel.dropdown.open span:nth-child(1)::before {
+  content: '';
+  padding-left: 25px;
+  background: url("../img/balans_b.png") 0 -1px no-repeat; }
+
+.top-panel.dropdown.open span:nth-child(2)::after {
+  content: '';
+  padding-right: 11px;
+  background: url("../img/arrow-top_b.png") 3px 7px no-repeat; }
+
+.user-menu .dropdown-menu {
+  color: #28292b;
+  min-width: 246px;
+  left: -121px;
+  padding: 25px 0;
+  padding-left: 40px; }
+  .user-menu .dropdown-menu li {
+    padding: 5px;
+    list-style-type: disc;
+    font-size: 13px; }
+    .user-menu .dropdown-menu li:hover {
+      color: #3cbf8c;
+      font-weight: bold; }
+
+.user-menu.dropdown {
+  padding: 4px; }
+  .user-menu.dropdown span {
+    padding-left: 25px; }
+  .user-menu.dropdown span::before {
+    position: absolute;
+    content: '';
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: url("../img/user.png") no-repeat; }
+  .user-menu.dropdown span::after {
+    content: '';
+    padding-right: 11px;
+    background: url("../img/arrow-top.png") 3px 7px no-repeat; }
+
+.user-menu.dropdown.open {
+  background-color: #fff;
+  -webkit-border-radius: 3px 3px 0 0;
+          border-radius: 3px 3px 0 0; }
+  .user-menu.dropdown.open span {
+    color: #222222; }
+  .user-menu.dropdown.open span::before {
+    position: absolute;
+    content: '';
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background: url("../img/user_b.png") no-repeat; }
+  .user-menu.dropdown.open span::after {
+    content: '';
+    padding-right: 11px;
+    background: url("../img/arrow-top_b.png") 3px 7px no-repeat; }
+  .user-menu.dropdown.open .dropdown-menu {
+    margin-top: -1px;
+    border-top: none;
+    -webkit-border-radius: 4px 0 4px 4px;
+            border-radius: 4px 0 4px 4px; }
+
 /*________End header________*/
 .main-wrapper {
   background: #f0f1f5;

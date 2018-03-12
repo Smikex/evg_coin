@@ -63,7 +63,7 @@ $(document).ready(function() {
   	});
   }
 
-/*________Hihgchart________*/
-
-
 });/*________End Document________*/
+
+
+

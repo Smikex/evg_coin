@@ -3,3 +3,4 @@
 /**/*.psd
 /**/Thumbs.db
 /**/.DS_Store
+/.sublime-gulp.cache/
